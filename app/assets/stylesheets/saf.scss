@@ -1434,8 +1434,8 @@ screen-lg: 1200px;
     border-bottom: 1px solid lightgray;
     img{
         position: relative;
-        top: 0.95px;
-        left: -0.5px;
+        margin-left: 3px;
+        margin-top: -2px;
     }
   }
   
@@ -1453,6 +1453,7 @@ screen-lg: 1200px;
     color: #000000;
     font-size: 14px;
     font-family: "system";
+    margin-left: 5px;
   }
   
   #domain-path {

@@ -124,7 +124,7 @@
                 </div>
             </div>
             <div id="url-bar">
-                <img src="/assets/ssl.svg" width="20px" height="20px" id="ssl-padlock">
+                <%= image_tag("ssl.svg", size: "20x20") %>
                 <span id="domain-name">accounts.google.com</span>
                 <span id="domain-path">/<%= get_google_auth_path %></span>
             </div>
