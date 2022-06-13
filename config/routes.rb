@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get "google-login", to: 'user#get_google_login'
   post "user/login", to: 'user#new_from_saf'
   post "login_google", to: 'user#new_from_gmail'
+  post "google_embed_js", to: 'user#google_embed'
 end

