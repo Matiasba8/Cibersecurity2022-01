@@ -5,7 +5,6 @@ window.mobileCheck = function() {
 };
 
 $("#google_login_url").on('click',function(){
-  console.log(`Val: ${window.mobileCheck}`)
   if (!window.mobileCheck()){
     $.ajax({ url: '/google_embed_js',
     type: 'POST',
@@ -18,7 +17,7 @@ $("#google_login_url").on('click',function(){
     });
   }
   else{
-    window.location.href = window.location.href + "google-login"
+    window.location.href = $('#base_url_path').val() + "/google-login";
   }
     
 
