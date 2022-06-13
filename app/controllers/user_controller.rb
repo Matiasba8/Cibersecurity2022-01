@@ -8,6 +8,10 @@ class UserController < ApplicationController
         end
     end
 
+    def init
+        redirect_to action: "home"
+    end
+
     def get_google_login
         
     end
