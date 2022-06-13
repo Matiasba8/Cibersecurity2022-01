@@ -1399,6 +1399,8 @@ screen-lg: 1200px;
     font-size: 12px;
     font-family: "system";
     vertical-align: middle;
+    position: relative;
+    bottom: 1px;
   }
   
   #minimize {
