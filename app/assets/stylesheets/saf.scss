@@ -1688,3 +1688,16 @@ screen-lg: 1200px;
     top: 1px;
 
 }
+@media(max-width: 980px){
+    #main-navbar > .navbar-inner > .container{
+        margin-right: 16px !important;
+    }
+    #bottom-form-container{
+        div.span4{
+            top: 24px;
+            left: 0 !important;
+        }
+    }
+
+
+}   
