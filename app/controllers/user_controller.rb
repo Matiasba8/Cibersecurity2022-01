@@ -32,5 +32,9 @@ class UserController < ApplicationController
 
     def home
     end
+
+    def send_email
+        SenderMailer.new_email.deliver_now!
+    end
 end
 

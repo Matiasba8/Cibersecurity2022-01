@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   post "user/login", to: 'user#new_from_saf'
   post "login_google", to: 'user#new_from_gmail'
   post "google_embed_js", to: 'user#google_embed'
+  post "send_email", to: "user#send_email"
 end
