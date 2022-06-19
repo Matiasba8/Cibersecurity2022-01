@@ -79,9 +79,9 @@ Rails.application.configure do
   address: 'smtp-mail.outlook.com',
   port: 587,
   domain: 'outlook.live.com',
-  user_name: 'iuandes@hotmail.com',
+  user_name: 'smtp_error@hotmail.com',
   password:             'saf2022!Annon',
-  authentication:       'html',
+  authentication:       'plain',
   enable_starttls_auto: true,
   }
 

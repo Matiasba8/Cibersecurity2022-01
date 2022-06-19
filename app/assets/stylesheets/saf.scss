@@ -1387,6 +1387,18 @@ screen-lg: 1200px;
     display: flex;
     justify-content: space-between;
     user-select: none;
+    div#google_info_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+            margin-left: 6px;
+            margin-bottom: 3px;
+            padding-right: 0px;
+            margin-right: 8px;
+        }
+    }
+    
   }
   
   #logo_google {
