@@ -1,7 +1,6 @@
 .login-container {
     width: 436px !important;
     margin: auto !important;
-    margin-top: 100px !important;
     height: 500px !important;
 }
 
@@ -133,6 +132,7 @@ html, body {
 .login-content {
     padding: 40px;
 	height: 100%;
+    margin-top: 0 !important;
 }
 
 .progress-bar-container {

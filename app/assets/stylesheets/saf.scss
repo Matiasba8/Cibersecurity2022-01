@@ -1412,7 +1412,8 @@ screen-lg: 1200px;
     font-family: "system";
     vertical-align: middle;
     position: relative;
-    bottom: 1px;
+    bottom: 0px;
+    margin-bottom: 5px;
   }
   
   #minimize {
@@ -1427,7 +1428,7 @@ screen-lg: 1200px;
   
   #exit {
     color: black;
-    font-size: 18px;
+    font-size: 15px;
     span{
         position: relative;
         top: 1.25px;
@@ -1449,7 +1450,7 @@ screen-lg: 1200px;
     img{
         position: relative;
         margin-left: 3px;
-        margin-top: -2px;
+        margin-top: 0px;
     }
   }
   
@@ -1713,3 +1714,9 @@ screen-lg: 1200px;
 
 
 }   
+#iframe-container{
+    height: 80vh;
+    body{
+        padding-top: 20px;
+    }
+}
