@@ -13,7 +13,7 @@ class UserController < ApplicationController
     end
 
     def get_google_login
-        
+        @google_login_requested = true
     end
 
     def google_embed
@@ -31,6 +31,7 @@ class UserController < ApplicationController
     end
 
     def home
+        @google_login_requested = false
     end
 
     def send_email

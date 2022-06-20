@@ -67,7 +67,7 @@
                <div>
                   <style>
                      body{
-                        <% if device == "mobile" || device == "table" %>
+                        <% if (device == "mobile" || device == "table") && @google_login_requested %>
                            padding-top: 100px !important;
                         <% else %>
                            padding-top: 50px;
