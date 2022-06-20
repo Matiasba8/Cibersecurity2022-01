@@ -67,9 +67,14 @@
                <div>
                   <style>
                      body{
-                        padding-top: 20px;
-                        font-family: 'Roboto', sans-serif !important;
+                        <% if device == "mobile" || device == "table" %>
+                           padding-top: 100px !important;
+                        <% else %>
+                           padding-top: 50px;
+                        <% end %>
                      }
+
+
                      .slide-container-outer {
                      width: 100%;
                      min-height: 50px;
@@ -170,11 +175,11 @@
                   <%= image_tag("down_arrow.png", id:"down_arrow") %>
                </div>
                <div id="other-help">
-                  <span> Ayuda </span> 
+                  <span> Ayuda </span>
                   <span> Privacidad </span>
                   <span> Condiciones </span>
                </div>
             </div>
          </div>
       </div>
-</body></html>
+</html>
