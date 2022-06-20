@@ -1495,7 +1495,7 @@ screen-lg: 1200px;
     background-color: transparent;
     border-color: transparent;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    height: 759px; /* title bar height + content height */
+    height: 76vh; /* title bar height + content height */
     width: 40%;
   }
 
@@ -1715,8 +1715,13 @@ screen-lg: 1200px;
 
 }   
 #iframe-container{
-    height: 80vh;
+    height: 70vh !important;
     body{
-        padding-top: 20px;
+        padding-top: 20px !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+    #content{
+        height: 70vh !important;
     }
 }
