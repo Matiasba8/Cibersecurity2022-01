@@ -14,6 +14,7 @@ html, body {
     border-radius: 8px;
 	height: 80%;
     position: relative;
+    right: 5px !important;
     width: 400px !important;
     margin: auto !important;
     height: 500px !important;
