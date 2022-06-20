@@ -76,10 +76,6 @@ window.addEventListener('load', function(event) {
     // Code to be executed every time a document is loaded.
     $(document).ready(function () {
 
-        $('body').css('margin-top','100px !important')
-        $('body').css('padding-left','0px !important')
-
-
         // Setup the footer.
         positionFooter();
         
