@@ -1716,12 +1716,13 @@ screen-lg: 1200px;
 }   
 #iframe-container{
     height: 70vh !important;
-    body{
-        padding-top: 20px !important;
-        padding-right: 0 !important;
-        padding-left: 0 !important;
-    }
+    
     #content{
         height: 70vh !important;
+        body{
+            padding-top: 20px !important;
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+        }
     }
 }

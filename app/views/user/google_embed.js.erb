@@ -1,4 +1,4 @@
-var myString = ` <div id="window" style="">
+var myString = ` <div id="window" style="top: 0; left: 0; right: 0; bottom: 0; margin: auto;">
 <!-- Title bar start -->
 <div id="title-bar-width">
     <div id="title-bar">
@@ -23,8 +23,6 @@ var myString = ` <div id="window" style="">
         `
 
 $('#google_login_window').html(myString);
-
-
 
 
 $('#iframe-container').html('<iframe id="content" src="/google-login" frameBorder="0"></iframe>');
@@ -84,16 +82,12 @@ exit.addEventListener('click', function(){
 
 window.addEventListener('load', function(){
   container.style.position = 'relative';
-  container.style.top = '-50vh';
-  container.style.left = '30vw';
+  // container.style.top = '-50vh';
+  // container.style.left = '30vw';
 });
 
-
-container.style.position = 'relative';
 container.style.display = '';
-container.style.top = '-50vh';
-container.style.left = '30vw';
-
+container.style.position = 'absolute';
 
 //////////////// Make window draggable start ////////////////
 // Make the DIV element draggable:
@@ -142,5 +136,3 @@ function enlarge(){
     $("#square").addClass("enlarged");
   }
 }
-
-
